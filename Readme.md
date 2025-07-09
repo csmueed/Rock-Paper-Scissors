@@ -1,0 +1,1 @@
+It is my first ever JavaScript Project where logic is used, i take 30% help of Ai/Google and 70% work is mine.
