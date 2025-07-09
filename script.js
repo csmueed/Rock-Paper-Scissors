@@ -19,17 +19,18 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   const userChoice = prompt("Enter one of these: Rock, Paper, Scissors");
-  if (userChoice === "Rock") {
+  if (!userChoice) return null; // handle cancel
+  const choice = userChoice.trim().toLowerCase();
+  if (choice === "rock") {
     return "Rock";
-  } else if (userChoice === "Paper") {
+  } else if (choice === "paper") {
     return "Paper";
-  } else if (userChoice === "Scissors") {
+  } else if (choice === "scissors") {
     return "Scissors";
   }
 }
 
-
-    //Now i declare the playround function, where popup on broswer appear and ask the input then it's check the condition and save the results.
+//Now i declare the playround function, where popup on broswer appear and ask the input then it's check the condition and save the results.
 function playRound(roundNumber) {
   console.log(`Round No: ${roundNumber}`);
   const human = getHumanChoice();
@@ -44,23 +45,23 @@ function playRound(roundNumber) {
     (human === "Paper" && computer === "Rock") ||
     (human === "Scissors" && computer === "Paper")
   ) {
-    console.log(`You Won, ${human} beats ${computer}`);
+    console.log ("You Win this Round!")
     humanScore++;
   } else if (
     (computer === "Rock" && human === "Scissors") ||
     (computer === "Paper" && human === "Rock") ||
     (computer === "Scissors" && human === "Paper")
   ) {
-    console.log(`Computer Won, ${computer} beats ${human}`);
+    console.log ("Computer Win this Round1")
     computerScore++;
   }
 }
 
-(playRound(1));
-(playRound(2));
-(playRound(3));
-(playRound(4));
-(playRound(5));
+playRound(1);
+playRound(2);
+playRound(3);
+playRound(4);
+playRound(5);
 
 console.log("---Final Score---");
 console.log(`Your Score: ${humanScore}`);
