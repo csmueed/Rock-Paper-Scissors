@@ -39,20 +39,20 @@ function playRound(roundNumber) {
   console.log(`You Choose ${human}`);
   console.log(`Computer Choose ${computer}`);
   if (human === computer) {
-    return "It's a Tie!";
+    return console.log ("It's a Tie!");
   } else if (
     (human === "Rock" && computer === "Scissors") ||
     (human === "Paper" && computer === "Rock") ||
     (human === "Scissors" && computer === "Paper")
   ) {
-    console.log ("You Win this Round!")
+    console.log("You Win this Round!");
     humanScore++;
   } else if (
     (computer === "Rock" && human === "Scissors") ||
     (computer === "Paper" && human === "Rock") ||
     (computer === "Scissors" && human === "Paper")
   ) {
-    console.log ("Computer Win this Round1")
+    console.log("Computer Win this Round1");
     computerScore++;
   }
 }
